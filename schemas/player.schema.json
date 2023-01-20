@@ -1,0 +1,30 @@
+{
+    "$id": "https://github.com/bernardomig/basketdb/schemas/player.schema.json",
+    "title": "Player",
+    "description": "A basketball player",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "The player first and last name",
+            "type": "string"
+        },
+        "nationality": {
+            "description": "The player's country of origin",
+            "type": "string",
+            "pattern": "^[A-Z]{2}$"
+        },
+        "height": {
+            "description": "Player's height",
+            "type": "integer"
+        },
+        "born": {
+            "description": "Players date of birth",
+            "type": "string",
+            "format": "date"
+        }
+    },
+    "required": [
+        "name",
+        "nationality"
+    ]
+}
